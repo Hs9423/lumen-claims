@@ -1,28 +1,94 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Responsive Lumen Claims</title>
+    <title>Lumen Claims Insurance Resolution</title>
 </head>
 <body>
     <header>
-        <h1>Lumen Claims</h1>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#hero">Hero</a></li>
+                <li><a href="#fraud-types">Fraud Types</a></li>
+                <li><a href="#insurance-tabs">Insurance Tabs</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact-form">Contact Form</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>Welcome to Lumen Claims</h2>
-        <p>Your claim management made easy.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <h1>Welcome to Lumen Claims</h1>
+        </section>
+        <section id="fraud-types">
+            <h2>Fraud Types</h2>
+            <p>Description of fraud types...</p>
+        </section>
+        <section id="insurance-tabs">
+            <h2>Insurance Tabs</h2>
+            <p>Details about insurance...</p>
+        </section>
+        <section id="guidelines">
+            <h2>Guidelines</h2>
+            <p>Guidelines for insurance claims...</p>
+        </section>
+        <section id="process">
+            <h2>Claim Process</h2>
+            <p>Process description...</p>
+        </section>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>Client feedback...</p>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to common questions...</p>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 Lumen Claims</p>
+        <p>&copy; 2026 Lumen Claims. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
+<style>
+/* CSS Styles */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header { background-color: #333; color: white; padding: 10px; }
+.hamburger-menu { display: none; cursor: pointer; }
+.mobile-nav { display: none; }
+.mobile-nav ul { list-style: none; padding: 0; margin: 0; }
+.mobile-nav a { color: white; text-decoration: none; }
+@media (max-width: 767px) {
+    .hamburger-menu { display: block; }
+    .mobile-nav { display: block; }
+    main { padding: 10px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    main { padding: 20px; }
+}
+@media (min-width: 1024px) {
+    main { padding: 30px; display: flex; flex-wrap: wrap; }
+}
+form { display: flex; flex-direction: column; }
+button { padding: 10px; margin-top: 10px; cursor: pointer; }
+</style>
