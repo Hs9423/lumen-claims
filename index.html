@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumen Claims — Insurance Resolution Experts</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0E1E35;
@@ -38,7 +38,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     overflow-x: hidden;
     line-height: 1.65;
     font-size: 15px;
@@ -62,7 +62,7 @@
   }
 
   .logo {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.45rem;
     font-weight: 700;
     color: var(--white);
@@ -106,16 +106,6 @@
     white-space: nowrap;
   }
   .nav-cta:hover { background: var(--crimson2); }
-
-  /* Mobile nav toggle */
-  .nav-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--white);
-    font-size: 1.35rem;
-    cursor: pointer;
-  }
 
   /* TICKER */
   .ticker {
@@ -237,7 +227,7 @@
   }
 
   .hero h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(2.6rem, 5vw, 4.4rem);
     font-weight: 700;
     line-height: 1.12;
@@ -249,7 +239,7 @@
   .hero h1 .accent { color: #E8A0A9; font-weight: 600; }
 
   .hero-lead {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
     color: rgba(255,255,255,0.7);
@@ -388,7 +378,7 @@
   }
 
   .section-title {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(1.8rem, 2.8vw, 2.6rem);
     font-weight: 700;
     color: var(--navy);
@@ -399,7 +389,7 @@
   .section-title em { font-weight: 700; color: var(--crimson); }
 
   .section-desc {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.95rem;
     color: var(--text-muted);
     max-width: 540px;
@@ -476,7 +466,7 @@
   .fraud-icon { font-size: 1.5rem; margin-bottom: 0.85rem; display: block; }
 
   .fraud-card h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--navy);
@@ -533,7 +523,7 @@
   .ins-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 
   .ins-detail h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.75rem;
     font-weight: 600;
     color: var(--navy);
@@ -618,14 +608,14 @@
     position: absolute; top: 1.25rem; right: 1.5rem;
     font-size: 3.5rem;
     color: rgba(255,255,255,0.04);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     line-height: 1;
     user-select: none;
   }
   .guideline-card .icon { font-size: 1.25rem; margin-bottom: 0.85rem; }
   .guideline-card h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--white);
@@ -697,7 +687,7 @@
     margin-bottom: 0.3rem;
   }
   .ps-body h4 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--navy);
@@ -800,7 +790,7 @@
     margin-bottom: 0.85rem;
   }
   .research-card h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--navy);
@@ -841,7 +831,7 @@
   .testimonial-stars { display: flex; gap: 0.2rem; margin-bottom: 1rem; }
   .testimonial-stars span { color: #C8860A; font-size: 0.85rem; }
   .testimonial-card blockquote {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.95rem;
     color: var(--text2);
     line-height: 1.8;
@@ -1059,41 +1049,10 @@
 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
-    nav { padding: 0 1rem; }
-    .nav-toggle { display: block; }
-    .nav { position: relative; }
-    .nav .nav-links {
-      display: flex;
-      position: fixed;
-      top: 64px;
-      right: 0;
-      width: 280px;
-      height: calc(100vh - 64px);
-      transform: translateX(100%);
-      background: #0A1828;
-      flex-direction: column;
-      gap: 0.25rem;
-      padding: 1rem 1rem 2rem;
-      overflow-y: auto;
-      z-index: 1200;
-      transition: transform 0.35s ease;
-    }
-    .nav.open .nav-links { transform: translateX(0); }
-    .nav.open::before {
-      content: '';
-      position: fixed;
-      inset: 64px 0 0 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1100;
-      transition: opacity 0.35s ease;
-    }
-    .nav .nav-links li { list-style: none; }
-    .nav .nav-links a { display: block; padding: 0.9rem 0.5rem; color: rgba(255,255,255,0.95); }
-    .nav .nav-cta { display: none; }
-    .nav.open .nav-cta { display: block; margin: 1rem; }
-    .ticker { display: none; }
-    section { padding: 3.25rem 1.25rem; }
-    .hero { padding: 6.5rem 1.25rem 3rem; }
+    nav { padding: 0 2rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 2rem; }
+    .hero { padding: 7rem 2rem 4rem; }
     .hero-trust { display: none; }
     .fraud-grid { grid-template-columns: repeat(2, 1fr); }
     .ins-panel.active { grid-template-columns: 1fr; }
@@ -1104,12 +1063,12 @@
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .guidelines-grid { grid-template-columns: 1fr; }
     .frauds-intro { grid-template-columns: 1fr; gap: 2rem; }
-    .rule { margin: 0 1.25rem; }
-    footer { padding: 2.5rem 1.25rem; }
+    .rule { margin: 0 2rem; }
+    footer { padding: 3rem 2rem; }
     .footer-bottom { flex-direction: column; }
     .footer-bottom .disclaimer { text-align: left; }
     .alert-banner { padding: 0.6rem 1.5rem; font-size: 0.7rem; }
-    .ps-item { grid-template-columns: 3rem 1fr; gap: 0.85rem; }
+    .ps-item { grid-template-columns: 3rem 1fr; gap: 1rem; }
   }
 </style>
 </head>
@@ -1142,7 +1101,6 @@
 <!-- Navigation -->
 <nav>
   <a href="#" class="logo">LumenClaims</a>
-  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
   <ul class="nav-links">
     <li><a href="#frauds">Fraud Types</a></li>
     <li><a href="#insurance">Insurance Types</a></li>
@@ -1708,11 +1666,11 @@
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:1.5rem;background:rgba(255,255,255,0.08);">
         <div style="background:rgba(155,28,46,0.15);border-top:2px solid var(--crimson);padding:1.2rem;text-align:center;">
-          <div style="font-family:'DM Sans',sans-serif;font-size:1.4rem;color:#F0B8C0;font-weight:700;line-height:1.2">No Win</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#F0B8C0;font-weight:700;line-height:1.2">No Win</div>
           <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.4rem;font-weight:600">No Fee — Ever</div>
         </div>
         <div style="background:rgba(26,107,58,0.12);border-top:2px solid #2A8A52;padding:1.2rem;text-align:center;">
-          <div style="font-family:'DM Sans',sans-serif;font-size:1.4rem;color:#7FD9A0;font-weight:700;line-height:1.2">₹0</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#7FD9A0;font-weight:700;line-height:1.2">₹0</div>
           <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.4rem;font-weight:600">Upfront Cost</div>
         </div>
       </div>
@@ -1925,7 +1883,7 @@
     </div>
 
     <div class="contact-info">
-      <h3 style="font-family:'DM Sans',sans-serif;font-size:1.75rem;font-weight:600;color:var(--navy);margin-bottom:0.9rem;line-height:1.2">We're With You.<br>Every Step of the Way.</h3>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:600;color:var(--navy);margin-bottom:0.9rem;line-height:1.2">We're With You.<br>Every Step of the Way.</h3>
       <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Whether you were defrauded yesterday or years ago — if your rights were violated, your case deserves a fighter. Reach out for a completely free, no-obligation assessment.</p>
 
       <div class="contact-item">
@@ -2052,8 +2010,8 @@
       document.getElementById('form-wrap').innerHTML = `
         <div style="text-align:center;padding:3rem 2rem;background:var(--bg);">
           <div style="font-size:3rem;margin-bottom:1.5rem">✅</div>
-          <div style="font-family:'DM Sans',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:1rem">Your Case Has Been Received</div>
-          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.8;max-width:400px;margin:0 auto;font-family:'DM Sans',sans-serif">
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);margin-bottom:1rem">Your Case Has Been Received</div>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.8;max-width:400px;margin:0 auto;font-family:'Source Sans 3',sans-serif">
             We'll review your details and reach out at <strong style="color:var(--white)">${email}</strong> to discuss your case. This is completely free and confidential.
           </p>
           <a href="mailto:Himanshu9423@gmail.com" style="display:inline-block;margin-top:2rem;font-size:0.8rem;color:var(--crimson);border:1px solid rgba(155,28,46,0.3);padding:0.6rem 1.5rem;text-decoration:none;">
@@ -2094,21 +2052,6 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Mobile nav toggle
-  const nav = document.querySelector('nav');
-  const navToggle = document.querySelector('.nav-toggle');
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('open');
-    });
-    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }));
-  }
 
   // Show/hide floating CTA
   window.addEventListener('scroll', () => {
