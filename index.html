@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Lumen Claims Insurance Resolution</title>
+    <style>
+        /* CSS Styles */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px; }
+        .hamburger-menu { display: none; cursor: pointer; }
+        .mobile-nav { display: none; }
+        .mobile-nav ul { list-style: none; padding: 0; margin: 0; }
+        .mobile-nav a { color: white; text-decoration: none; }
+        @media (max-width: 767px) {
+            .hamburger-menu { display: block; }
+            .mobile-nav { display: block; }
+            main { padding: 10px; }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            main { padding: 20px; }
+        }
+        @media (min-width: 1024px) {
+            main { padding: 30px; display: flex; flex-wrap: wrap; }
+        }
+        form { display: flex; flex-direction: column; }
+        button { padding: 10px; margin-top: 10px; cursor: pointer; }
+    </style>
 </head>
 <body>
     <header>
@@ -69,26 +90,3 @@
     </footer>
 </body>
 </html>
-
-<style>
-/* CSS Styles */
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-header { background-color: #333; color: white; padding: 10px; }
-.hamburger-menu { display: none; cursor: pointer; }
-.mobile-nav { display: none; }
-.mobile-nav ul { list-style: none; padding: 0; margin: 0; }
-.mobile-nav a { color: white; text-decoration: none; }
-@media (max-width: 767px) {
-    .hamburger-menu { display: block; }
-    .mobile-nav { display: block; }
-    main { padding: 10px; }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-    main { padding: 20px; }
-}
-@media (min-width: 1024px) {
-    main { padding: 30px; display: flex; flex-wrap: wrap; }
-}
-form { display: flex; flex-direction: column; }
-button { padding: 10px; margin-top: 10px; cursor: pointer; }
-</style>
