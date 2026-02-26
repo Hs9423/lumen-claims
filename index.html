@@ -107,6 +107,16 @@
   }
   .nav-cta:hover { background: var(--crimson2); }
 
+  /* Mobile nav toggle */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.35rem;
+    cursor: pointer;
+  }
+
   /* TICKER */
   .ticker {
     background: #0A1828;
@@ -1049,10 +1059,41 @@
 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
-    nav { padding: 0 2rem; }
-    .nav-links { display: none; }
-    section { padding: 4rem 2rem; }
-    .hero { padding: 7rem 2rem 4rem; }
+    nav { padding: 0 1rem; }
+    .nav-toggle { display: block; }
+    .nav { position: relative; }
+    .nav .nav-links {
+      display: flex;
+      position: fixed;
+      top: 64px;
+      right: 0;
+      width: 280px;
+      height: calc(100vh - 64px);
+      transform: translateX(100%);
+      background: #0A1828;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1rem 1rem 2rem;
+      overflow-y: auto;
+      z-index: 1200;
+      transition: transform 0.35s ease;
+    }
+    .nav.open .nav-links { transform: translateX(0); }
+    .nav.open::before {
+      content: '';
+      position: fixed;
+      inset: 64px 0 0 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1100;
+      transition: opacity 0.35s ease;
+    }
+    .nav .nav-links li { list-style: none; }
+    .nav .nav-links a { display: block; padding: 0.9rem 0.5rem; color: rgba(255,255,255,0.95); }
+    .nav .nav-cta { display: none; }
+    .nav.open .nav-cta { display: block; margin: 1rem; }
+    .ticker { display: none; }
+    section { padding: 3.25rem 1.25rem; }
+    .hero { padding: 6.5rem 1.25rem 3rem; }
     .hero-trust { display: none; }
     .fraud-grid { grid-template-columns: repeat(2, 1fr); }
     .ins-panel.active { grid-template-columns: 1fr; }
@@ -1063,12 +1104,12 @@
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .guidelines-grid { grid-template-columns: 1fr; }
     .frauds-intro { grid-template-columns: 1fr; gap: 2rem; }
-    .rule { margin: 0 2rem; }
-    footer { padding: 3rem 2rem; }
+    .rule { margin: 0 1.25rem; }
+    footer { padding: 2.5rem 1.25rem; }
     .footer-bottom { flex-direction: column; }
     .footer-bottom .disclaimer { text-align: left; }
     .alert-banner { padding: 0.6rem 1.5rem; font-size: 0.7rem; }
-    .ps-item { grid-template-columns: 3rem 1fr; gap: 1rem; }
+    .ps-item { grid-template-columns: 3rem 1fr; gap: 0.85rem; }
   }
 </style>
 </head>
@@ -1101,6 +1142,7 @@
 <!-- Navigation -->
 <nav>
   <a href="#" class="logo">LumenClaims</a>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
   <ul class="nav-links">
     <li><a href="#frauds">Fraud Types</a></li>
     <li><a href="#insurance">Insurance Types</a></li>
@@ -2052,6 +2094,21 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mobile nav toggle
+  const nav = document.querySelector('nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
 
   // Show/hide floating CTA
   window.addEventListener('scroll', () => {
